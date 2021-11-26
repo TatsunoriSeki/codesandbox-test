@@ -30,3 +30,22 @@ const func3 = (num1, num2) => {
   return num1 + num2;
 };
 console.log(func3(2, 3));
+
+//分割代入(オブジェクト、配列)
+// const myProfile = {
+//   name: "佐藤",
+//   age: 30
+// };
+// const message3 = `名前は ${myProfile.name}です。年齢は${myProfile.age}です。`;
+// console.log(message3);
+// const { name, age } = myProfile;
+// const message4 = `名前は ${name}です。年齢は${age}です。`;
+// console.log(message4);
+
+const myProfile = ["スズキ", 35];
+const message5 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}`;
+console.log(message5);
+
+const [name, age] = myProfile;
+const message6 = `名前は${name}です。年齢は${age}です。`;
+console.log(message6);
