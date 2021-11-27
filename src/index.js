@@ -1,3 +1,24 @@
+// //const let
+// var var1 = "var変数";
+// console.log(var1);
+// //varは上書き可能
+// var1 = "var変数を上書き";
+// console.log(var1);
+// //var変数は再宣言可能
+// var1 = "var変数を再宣言";
+// console.log(var1);
+
+// //let は上書き可能、再宣言不可能
+// //const は上書きも再宣言も不可能
+// //constで定義しtオブジェクトまたはプロパティは変更可能
+// const val4 = {
+//   name: "a",
+//   age: 20
+// };
+// val4.name = "b";
+// val4.addres = "tokyo";
+// console.log(val4);
+
 // //テンプレート文字列
 // const name = "佐藤";
 // const age = 28;
@@ -88,7 +109,7 @@
 // console.log(arr4);
 
 //mapやfilterを使った配列の処理
-const nameArr = ["sato", "tanaka", "suzuki"];
+// const nameArr = ["sato", "tanaka", "suzuki"];
 // for (let i = 0; i < nameArr.length; i++) {
 //   console.log(`${i + 1}番目は番目は${nameArr[i]}です`);
 // }
@@ -108,11 +129,49 @@ const nameArr = ["sato", "tanaka", "suzuki"];
 // console.log(newNumArr);
 // console.log(newNumArr[0]);
 
-const newNameArr = nameArr.map((name) => {
-  if (name === "suzuki") {
-    return name;
-  } else {
-    return `${name}さん`;
-  }
-});
-console.log(newNameArr);
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "suzuki") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArr);
+
+// 三項演算子
+//ある条件 ? 条件がtrueの時 : 条件がfalseの時(if elseのような使い方ができる)
+// const val1 = 1 > 0 ? "true" : "false";
+// console.log(val1);
+
+// const num = "1300";
+// // console.log(num.toLocaleString());
+
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString : "数値を入力してください";
+// console.log(formattedNum);
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "100を超えています" : "範囲内";
+// };
+// console.log(checkSum(50, 60));
+
+//論理演算子　&& ||
+// const flg1 = true;
+// const flg2 = false;
+
+// if (flg1 || flg2) {
+//   console.log("1か2はtrue");
+// }
+// if (flg1 && flg2) {
+//   console.log("1か2はtrue");
+// }
+
+// ||は左側がfalseなら右側を返す
+const num99 = null;
+const fee = num99 || "金額未設定です";
+console.log(fee);
+
+// &&は左側がtrueなら右側を返す
+const num98 = 100;
+const fee2 = num98 && "何か設定されました";
+console.log(fee2);
